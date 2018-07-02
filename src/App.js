@@ -18,7 +18,7 @@ class App extends Component {
       gender: '',
       //Checkbox example: <input type="checkbox" name="favouriteMusic" value="Hip-Hop" checked={this.state.form.favouriteMusic.includes('Hip-Hop')} />
       favouriteMusic: [],
-      //React-Select example (one selection): <Select name="countryOfBirth" value={this.state.form.countryOfBirth} onChange={this.selectChanged.bind(this, 'countryOfBirth')} simpleValue={true} />
+      //React-Select example (one selection at a time): <Select name="countryOfBirth" value={this.state.form.countryOfBirth} onChange={this.selectChanged.bind(this, 'countryOfBirth')} simpleValue={true} />
       countryOfBirth: ''
     }
   }
@@ -36,7 +36,7 @@ class App extends Component {
   //Handle checkboxes (keep the checked values in an array)
   checkboxChanged = (event) => {
     const { form } = this.state;
-    //Check the checkbox group name and the value we're toggling
+    //Get the checkbox group name and the value of the checkbox being toggled
     const { name, value } = event.target;
   
     //Find out whether the value is already in the checkbox value array
